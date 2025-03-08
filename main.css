@@ -6,6 +6,7 @@
 }
 
 .container{
+    width: 100vw;
     font-family: roboto;
 
     position: relative;
@@ -170,28 +171,93 @@ ul li:hover .icon{
 
 /* JANELA POP UP DO BOTÃO PORTIFÓLIO */
 
-.modal{
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    
     position: absolute;
+    top: 0;
+    left: 0;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.modal{
+    width: 60%;
+    min-width: 400px;
+    min-height: 200px;
+    position: relative;
+
+
     color: white;
     backdrop-filter: blur(5px);
     border-radius: 50px;
     border: solid 2px;
-    top: -20px;
 
 
     padding: 10px;
     margin: 30px;
-    opacity: 0;
+    text-align: center;
+    font-family: roboto;
 }
 
+
 .modal h1{
-    padding-bottom: 20px;
+    text-shadow: black 0px 2px 2px;
+    padding-top: 10px;
     color: red;
 }
 
 .modal h2{
-    padding: 40px 80px;
+    padding: 30px 50px;
     text-shadow: black 2px 2px 2px;
 }
 
+.timer{
+    position: absolute;
+    left: 73%;
+    top: 370px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+
+    text-shadow: black 2px 2px 2px;
+
+    border: none;
+
+    z-index: 10;
+
+    display: ;
+}
+
+
+.janela-modal.abrir{
+    display: flex;
+}
+
+
+@keyframes abrirmodal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+    
+}
+
+.abrir .modal{
+    animation: abrirmodal 0.5s;
+}
