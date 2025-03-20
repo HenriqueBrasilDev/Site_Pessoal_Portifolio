@@ -2,6 +2,13 @@ function abrirModal(){
     const modal = document.getElementById('janela-modal')
     modal.classList.add('abrir')
 
-    setTimeout(function () {modal.classList.remove('abrir')}, 7000)
-}
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar' || e.target.id == 'janela-modal'){
+            modal.classList.remove('abrir')
+        }
+    })
 
+
+
+    // setTimeout(function () {modal.classList.remove('abrir')}, 7000)
+}

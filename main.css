@@ -9,7 +9,6 @@
     width: 100vw;
     font-family: roboto;
 
-    position: relative;
     text-align: center;
 
     min-height: 100dvh;
@@ -26,14 +25,18 @@
 }
 
 .conteudo{
-    min-width: 18vw;
+    width: 100vw;
+    max-width: 300px;
+
+    min-height: 80vh;
     max-height: 80dvh;
 
     padding: 50px;
-    backdrop-filter: blur(3px);
     border-radius: 50px;
     border: solid 1px white;
     box-shadow: 0px 50px 50px 10px black;
+
+    margin: 20px;
 }
 
 .conteudo > img{
@@ -42,8 +45,8 @@
 }
 
 .conteudo h1{
-    margin: 15px auto 0 auto;
-    font-size: 1.8em;
+    margin: 20px auto 370px auto;
+    font-size: 2em;
     color: white;
     text-shadow: 0px 3px 3px black;
 
@@ -57,26 +60,30 @@
 }
 
 .buttons a{
-    width: 100%;
-    cursor: pointer;
-    color: white;
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(155, 81, 224));
+    margin: 10px 0;
+    padding: 10px 0;
     border-radius: 15px;
+
     text-decoration: none;
+    text-shadow: black 0px 2px 5px;
     align-items: center;
     display: block;
-    padding: 10px 0;
-    margin: 10px 0;
-    
-    position: relative;
+    color: white;
+    backdrop-filter: blur(15px);
+    border: solid white 2px;
+
+
+    cursor: pointer;
+
+
+    /* background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(155, 81, 224)); */
 }
 
 
 .buttons a:hover{
-    box-shadow: 0px 3px 3px black;
 }
 
-.buttons a::before{
+/* .buttons a::before{
     content: '';
 
     width: 100%;
@@ -88,7 +95,7 @@
 
 ul li:hover ::before{
     opacity: 1;
-}
+} */
 
 
 
@@ -113,7 +120,6 @@ ul li:hover ::before{
 
 ul{
     list-style-type: none;
-    position: relative;
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -123,10 +129,9 @@ ul{
 li{
     width: 50px;
     height: 50px;
-    position: relative;
     border-radius: 60px;
 
-    transition: 1s; 
+    transition: 1s;
 
     display: flex;
     align-items: center;
@@ -178,7 +183,7 @@ ul li:hover .icon{
     position: absolute;
     top: 0;
     left: 0;
-    
+    backdrop-filter: blur(5px);    
     
     display: flex;
     align-items: center;
@@ -190,8 +195,8 @@ ul li:hover .icon{
 .modal{
     width: 60%;
     min-width: 400px;
+    max-width: 450px;
     min-height: 200px;
-    position: relative;
 
 
     color: white;
@@ -200,7 +205,7 @@ ul li:hover .icon{
     border: solid 2px;
 
 
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     margin: 30px;
     text-align: center;
     font-family: roboto;
@@ -217,29 +222,6 @@ ul li:hover .icon{
     padding: 30px 50px;
     text-shadow: black 2px 2px 2px;
 }
-
-.timer{
-    position: absolute;
-    left: 73%;
-    top: 370px;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-
-    cursor: pointer;
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
-
-    text-shadow: black 2px 2px 2px;
-
-    border: none;
-
-    z-index: 10;
-
-    display: ;
-}
-
 
 .janela-modal.abrir{
     display: flex;
@@ -260,4 +242,25 @@ ul li:hover .icon{
 
 .abrir .modal{
     animation: abrirmodal 0.5s;
+}
+
+.fechar{
+    position: relative;
+    top: 10px;
+    right: -180px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 20px;
+
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+
+    z-index: 1;
 }
