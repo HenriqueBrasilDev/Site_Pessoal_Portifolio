@@ -7,6 +7,7 @@
 body{
     width: 100%;
     height: 100dvh;
+    
 
     background-image: url(imgs/walleu.png);
     background-repeat: no-repeat;
@@ -17,6 +18,7 @@ body{
 .container{
     width: 100%;
     height: 100dvh;
+
     
     font-family: roboto;
     
@@ -26,10 +28,10 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-
-
-
-
+    
+    
+    
+    
 }
 
 .conteudo{
@@ -38,12 +40,11 @@ body{
     
     height: 100%;
     max-height: 95vh;
-
-
+    
     border-radius: 40px;
     border: solid 1px white;
     box-shadow: 0px 50px 50px 10px black;
-
+    
     display: flex;
     flex-direction: column;
 }
