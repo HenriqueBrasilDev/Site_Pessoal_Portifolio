@@ -1,52 +1,57 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-      
+    overflow: hidden;  
 }
 
-.container{
-    width: 100vw;
-    font-family: roboto;
-
-    text-align: center;
-
-    min-height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+body{
+    width: 100%;
+    height: 100dvh;
 
     background-image: url(imgs/walleu.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
     
+    font-family: roboto;
+    
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+
+
 }
 
 .conteudo{
-    width: 100vw;
-    max-width: 300px;
+    width: 90%;
+    max-width: 450px;
+    
+    height: 100%;
+    max-height: 90vh;
 
-    min-height: 80vh;
-    max-height: 80dvh;
 
-    padding: 50px;
-    border-radius: 50px;
+    border-radius: 40px;
     border: solid 1px white;
     box-shadow: 0px 50px 50px 10px black;
 
-    margin: 20px;
-}
-
-.conteudo > img{
-    width: 30vh;
-    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .conteudo h1{
-    margin: 20px auto 370px auto;
-    font-size: 2em;
+    margin: 50px auto auto auto;
+
+    font-size: 2.5em;
     color: white;
     text-shadow: 0px 3px 3px black;
 
@@ -54,9 +59,11 @@
     font-weight: 550;
 }
 
+.acessos{   
+}
+
 .buttons{
-    width: 100%;
-    margin: 2em auto;
+    padding: 0 30px;
 }
 
 .buttons a{
@@ -70,12 +77,10 @@
     display: block;
     color: white;
     backdrop-filter: blur(15px);
-    border: solid white 2px;
+    border: solid white 1px;
 
 
     cursor: pointer;
-
-
     /* background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(155, 81, 224)); */
 }
 
@@ -100,25 +105,10 @@ ul li:hover ::before{
 
 
 
-
-
-
-@media screen and (max-width: 640px){
-
-
-
-}
-
-
-
-
-
-
-
-
 /* Links */
 
 ul{
+    padding: 5% 5%;
     list-style-type: none;
     display: flex;
     gap: 15px;
@@ -171,9 +161,6 @@ ul li:hover .icon{
 }
 
 
-
-
-
 /* JANELA POP UP DO BOTÃO PORTIFÓLIO */
 
 .janela-modal{
@@ -193,15 +180,14 @@ ul li:hover .icon{
 }
 
 .modal{
-    width: 60%;
-    min-width: 400px;
+    width: 100vw;
     max-width: 450px;
     min-height: 200px;
 
 
     color: white;
     backdrop-filter: blur(5px);
-    border-radius: 50px;
+    border-radius: 30px;
     border: solid 2px;
 
 
@@ -240,17 +226,17 @@ ul li:hover .icon{
     
 }
 
-.abrir .modal{
+.abrir .curriculo{
     animation: abrirmodal 0.5s;
 }
 
 .fechar{
-    position: relative;
+    position: absolute;
     top: 10px;
-    right: -180px;
+    right: 10px;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 15px;
     border: 0;
 
     font-family: roboto;
@@ -262,5 +248,110 @@ ul li:hover .icon{
 
     cursor: pointer;
 
-    z-index: 1;
+    z-index: 999;
 }
+
+
+/* Janela Curriculo */
+
+.janela-curriculo{
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(3px);
+
+    display: none;
+}
+
+.janela-curriculo.abrirc{
+    display: flex;
+}
+
+@keyframes abrircur{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrirc .curriculo{
+    animation: abrircur 0.5s;
+}
+
+.curriculo{
+    width: 95%;
+    max-width: 500px;
+    
+    padding-top: 50px;
+
+    position: relative;
+}
+
+.baixar-curriculo img{
+    width: 25px;
+    height: 25px;
+
+    padding: 7.5px;
+
+    position: absolute;
+    top: -5px;
+    right: 47px;
+    margin-top: 5px;
+    
+    border-radius: 16px;
+    border: 0;
+    
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 16px;
+    
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    
+    cursor: pointer;
+}
+
+
+.janela-curriculo > .curriculo > img{
+    width: 100%;
+
+    border-radius: 25px;
+
+}
+
+.fechar-curriculo{
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    margin-top: 5px;
+    
+    border-radius: 16px;
+    border: 0;
+    
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 20px;
+    
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+    cursor: pointer;
+
+    
+}
+
