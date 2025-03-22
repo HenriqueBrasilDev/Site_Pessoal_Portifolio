@@ -28,6 +28,8 @@ body{
     text-align: center;
 
 
+
+
 }
 
 .conteudo{
@@ -35,7 +37,7 @@ body{
     max-width: 30em;
     
     height: 100%;
-    max-height: 95dvh;
+    max-height: 95vh;
 
 
     border-radius: 40px;
@@ -289,8 +291,8 @@ ul li:hover .icon{
 }
 
 .curriculo{
-    max-width: 600px;
-    max-height: 95dvh;
+    max-width: 520px;
+    max-height: 90vh;
 
     padding-top: 45px;
     margin: 10px;
