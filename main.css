@@ -285,9 +285,8 @@ ul li:hover .icon{
 }
 
 .curriculo{
-    max-width: 520px;
-    max-height: 90vh;
-
+    width: 600px;
+    max-width: 100%;
     padding-top: 45px;
     margin: 10px;
 
