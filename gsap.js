@@ -4,31 +4,37 @@ gsap.from("h1",{
 })
 
 gsap.from(".btt-port",{
-    y:100,
-    duration:1
+    y:200,
+    duration:2,
+    delay: 1
 })
 
 gsap.from(".btt-cur",{
-    y:100,
-    duration:2
+    y:200,
+    duration:2,
+    delay: 2
 })
 
 gsap.from(".btt-whats",{
-    y:100,
-    duration:3
+    y:200,
+    duration:2,
+    delay: 3
 })
 
 gsap.from(".instagram",{
-    x:-100,
-    duration:2
+    x:-200,
+    duration:2,
+    delay: 5
 })
 
 gsap.from(".github",{
     y:100,
-    duration:3
+    duration:3,
+    delay: 4
 })
 
 gsap.from(".linkedin",{
-    x:100,
-    duration:2
+    x:200,
+    duration:2,
+    delay: 5
 })
