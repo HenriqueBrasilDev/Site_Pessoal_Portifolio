@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Whisper&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
-    <script src="gsap.js" defer></script>
+    <!-- <script src="gsap.js" defer></script> -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -73,19 +73,30 @@
 
     <div class="janela-modal" id="janela-modal">
         <div class="modal">
+            
+            
             <button class="fechar" id="fechar">X</button>
             <h1>Atenção</h1>
             <h2>Portfólio em desenvolvimento, caso queira verificar alguns dos meus trabalhos, <br>
                 acesse meu instagram logo abaixo, ou entre em contato.</h2>
+            </div>
         </div>
-    </div>
-
+        
     
     <div class="janela-curriculo" id="janela-curriculo">
         <div class="curriculo">
-            <a class="baixar-curriculo" id="baixar-curriculo" href="./imgs/Preto e Verde Currículo Simples de Desenvolvedor Web Roxo.pdf" download ><img src="./imgs/download-direto.png" alt=""></a>
+            <div style="position: absolute; top: 0px;">
+                <button class="bttCaprichado" onclick="bttCaprichado()">Caprichado</button>
+                <button class="bttSimples" onclick="bttSimples()">Simples</button>
+            </div>
+
+
+            <a class="baixar-curriculo " id="baixar-curriculo-design" href="./imgs/Curriculo-HenriqueBrasil-Design.pdf" download ><img src="./imgs/download-direto.png" alt=""></a>
+            <a class="baixar-curriculo curriculo-none" id="baixar-curriculo-simples" href="./imgs/Curriculo-HenriqueBrasil-Simples.pdf" download ><img src="./imgs/download-direto.png" alt=""></a>
+
             <button class="fechar-curriculo" id="fechar-curriculo">X</button>
-            <img src="./imgs/Preto e Verde Currículo Simples de Desenvolvedor Web Roxo.png" alt="">
+            <img class="curriculo-none" id="curSimples" src="./imgs/Curriculo Simples.png" alt="">
+            <img class="" id="curCaprichado" src="./imgs/Preto e Verde Currículo Simples de Desenvolvedor Web Roxo.png" alt="">
         </div>
     </div>
     

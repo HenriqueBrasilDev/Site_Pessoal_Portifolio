@@ -7,10 +7,6 @@ function abrirModal(){
             modal.classList.remove('abrir')
         }
     })
-
-
-
-    // setTimeout(function () {modal.classList.remove('abrir')}, 7000)
 }
 
 function abrirCurriculo(){
@@ -22,8 +18,34 @@ function abrirCurriculo(){
             janelacur.classList.remove('abrirc')
         }
     })
+}
 
 
+function bttSimples(){
+    const curriculosimples = document.getElementById('curSimples')
+    const curriculocaprichado = document.getElementById('curCaprichado')
 
-    // setTimeout(function () {modal.classList.remove('abrir')}, 7000)
+    const bttdowloadsimples = document.getElementById('baixar-curriculo-simples')
+    const bttdowloadcapri = document.getElementById('baixar-curriculo-design')
+
+    curriculocaprichado.classList.add('curriculo-none')
+    curriculosimples.classList.remove('curriculo-none')
+
+    bttdowloadsimples.classList.remove('curriculo-none')
+    bttdowloadcapri.classList.add('curriculo-none')
+
+}
+
+function bttCaprichado(){
+    const curriculosimples = document.getElementById('curSimples')
+    const curriculocaprichado = document.getElementById('curCaprichado')
+
+    const bttdowloadsimples = document.getElementById('baixar-curriculo-simples')
+    const bttdowloadcapri = document.getElementById('baixar-curriculo-design')
+
+    curriculocaprichado.classList.remove('curriculo-none')
+    curriculosimples.classList.add('curriculo-none')
+    
+    bttdowloadsimples.classList.add('curriculo-none')
+    bttdowloadcapri.classList.remove('curriculo-none')
 }

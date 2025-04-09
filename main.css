@@ -25,7 +25,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+}
+    
+body{
+        width: 100%;
+        height: 100dvh;
+    
+        background-image: url(imgs/walleu.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
 }
 
 .conteudo{
@@ -295,14 +305,15 @@ ul li:hover .icon{
 
     position: relative;
 
+    
 }
 
 .baixar-curriculo img{
     width: 25px;
     height: 25px;
-
+    
     padding: 7.5px;
-
+    
     position: absolute;
     top: -5px;
     right: 47px;
@@ -326,8 +337,12 @@ ul li:hover .icon{
     width: 100%;
 
     border-radius: 25px;
-
 }
+
+.curriculo > .curriculo-none{
+   display: none;
+}
+
 
 .fechar-curriculo{
     width: 40px;
@@ -349,7 +364,35 @@ ul li:hover .icon{
     color: rgb(0, 0, 0);
     
     cursor: pointer;
+}
 
-    
+.bttSimples,
+.bttCaprichado{
+    width: 100px;
+    height: 40px;
+
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 16px;
+
+    background-color: white;
+    border: none;
+
+    font-family: roboto;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.bttCaprichado:hover{
+    background-color: blueviolet;
+    transition: 1s;
+    color: white;
+}
+
+.bttSimples:hover{
+    background-color: #e09b5c;
+    transition: 1s;
+    color: white;
 }
 
