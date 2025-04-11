@@ -8,10 +8,11 @@ body{
     width: 100%;
     height: 100dvh;
 
-    background-image: url(imgs/walleu.png);
+    background-image: url(imgs/walleu.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    text-align: center;
 }
 
 .container{
@@ -25,17 +26,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-    
-body{
-        width: 100%;
-        height: 100dvh;
-    
-        background-image: url(imgs/walleu.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        text-align: center;
 }
 
 .conteudo{
@@ -57,6 +47,7 @@ body{
 
 .conteudo h1{
     margin: 50px auto auto auto;
+    padding: 20px;
 
     font-size: 2.5em;
     color: white;
