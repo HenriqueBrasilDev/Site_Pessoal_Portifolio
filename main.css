@@ -1,25 +1,25 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 body{
-    width: 100%;
     height: 100dvh;
-
-    background-image: url(imgs/walleu3.png);
+    
+    background-image: url(imgs/walleu4.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-x: 5px;
-
+    overflow: hidden;
+    
     text-align: center;
 }
 
 video.videointro{
+    height: 100dvh; 
+
     display: block;
-    height: 100dvh;
     position:absolute;
     align-items: center;
 }
