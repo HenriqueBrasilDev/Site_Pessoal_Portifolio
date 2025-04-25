@@ -12,13 +12,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-position-x: 5px;
 
     text-align: center;
 }
 
 video.videointro{
     display: block;
-    height: 100vh;
+    height: 100dvh;
     position:absolute;
     align-items: center;
 }
