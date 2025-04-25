@@ -38,3 +38,9 @@ gsap.from(".linkedin",{
     duration:2,
     delay: 5
 })
+
+gsap.to(".videointro",{
+    opacity: 0,
+    duration: 2,
+    delay: 5
+})

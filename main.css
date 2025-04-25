@@ -8,11 +8,19 @@ body{
     width: 100%;
     height: 100dvh;
 
-    background-image: url(imgs/walleu.gif);
+    background-image: url(imgs/walleu3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     text-align: center;
+}
+
+video.videointro{
+    display: block;
+    height: 100vh;
+    position:absolute;
+    align-items: center;
 }
 
 .container{
@@ -46,8 +54,8 @@ body{
 }
 
 .conteudo h1{
-    margin: 50px auto auto auto;
-    padding: 20px;
+    margin: 50px 0 0px 0;
+    padding: 5px 5px;
 
     font-size: 2.5em;
     color: white;
@@ -57,7 +65,10 @@ body{
     font-weight: 550;
 }
 
-.acessos{   
+.acessos{
+    margin-top: auto;
+    margin-bottom: 30px;
+
 }
 
 .buttons{
@@ -106,7 +117,7 @@ ul li:hover ::before{
 /* Links */
 
 ul{
-    padding: 5% 5%;
+    padding: 0% 5%;
     list-style-type: none;
     display: flex;
     gap: 15px;
