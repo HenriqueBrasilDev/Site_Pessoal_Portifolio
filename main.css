@@ -5,54 +5,61 @@
 }
 
 body{
+    width: 100%;
     height: 100dvh;
     
-    background-image: url(imgs/walleu4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    
+
+    display: flex;
+    justify-content: center;
     text-align: center;
-}
-
-video.videointro{
-    height: 100dvh; 
-
-    display: block;
-    position:absolute;
-    align-items: center;
 }
 
 .container{
     width: 100%;
-    height: 100dvh;
+
 
     
     font-family: roboto;
-    
+
     
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .conteudo{
     width: 100%;
-    max-width: 500px;
-    
-    height: 100%;
-    max-height: 95dvh;
+    max-width: 460px;
 
-    margin: 20px;
+    margin: 30px 20px;
+
+
+    background-image: url(imgs/walleu4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
     
     border-radius: 40px;
     border: solid 1px white;
-    box-shadow: 0px 50px 50px 10px black;
+    box-shadow: 0px 0px 20px 5px black;
     
     display: flex;
     flex-direction: column;
 }
+
+
+.conteudo .videointro{
+    height: 100%;
+    border-radius: 40px;
+
+
+    display: flex;
+    position: absolute;
+    align-items: center;
+}
+
 
 .conteudo h1{
     margin: 50px 0 0px 0;
@@ -66,10 +73,22 @@ video.videointro{
     font-weight: 550;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .acessos{
     margin-top: auto;
     margin-bottom: 30px;
-
 }
 
 .buttons{
@@ -78,7 +97,6 @@ video.videointro{
 
 .buttons a{
     margin: 10px 0;
-    padding: 10px 0;
     border-radius: 15px;
 
     text-decoration: none;
@@ -91,11 +109,55 @@ video.videointro{
 
 
     cursor: pointer;
-    /* background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(155, 81, 224)); */
 }
 
 
-.buttons a:hover{
+
+
+.acessos ul{
+    
+}
+
+.acessos li{
+    height: 50px;
+    border-radius: 60px;
+
+    transition: 1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acessos ul li span{
+    position: absolute;
+}
+
+.acessos ul li:hover{
+}
+
+.acessos ul li .text{
+    transition: 1s;
+    transition-delay: .2s;
+
+}
+
+.acessos ul li .icon{
+    width: 40px;
+    color: rgb(255, 255, 255);
+    transform: scale(0);
+    transition: 1s;
+    transition-delay: .2s;
+
+    font-family: roboto;
+}
+
+.acessos ul li:hover .text{
+    transform: scale(0);
+}
+
+.acessos ul li:hover .icon{
+    transform: scale(1);
 }
 
 /* .buttons a::before{
@@ -117,7 +179,7 @@ ul li:hover ::before{
 
 /* Links */
 
-ul{
+ul.links{
     padding: 0% 5%;
     list-style-type: none;
     display: flex;
@@ -126,7 +188,7 @@ ul{
 
 }
 
-li{
+ul.links li{
     width: 50px;
     height: 50px;
     border-radius: 60px;
@@ -138,22 +200,22 @@ li{
     justify-content: center;
 }
 
-ul li span{
+ul.links li span{
     position: absolute;
 }
 
-ul li:hover{
+ul.links li:hover{
     width: 100px;
 }
 
-ul li .icon{
+ul.links li .icon{
     width: 25px;
     transition: 1s;
     transition-delay: .2s;
 
 }
 
-ul li .text{
+ul.links li .text{
     color: rgb(255, 255, 255);
     transform: scale(0);
     transition: 1s;
@@ -162,11 +224,11 @@ ul li .text{
     font-family: roboto;
 }
 
-ul li:hover .text{
+ul.links li:hover .text{
     transform: scale(1);
 }
 
-ul li:hover .icon{
+ul.links li:hover .icon{
     transform: scale(0);
 }
 

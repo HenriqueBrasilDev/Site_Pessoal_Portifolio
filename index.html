@@ -17,17 +17,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <!-- https://music.youtube.com/watch?v=WRo-i9xzITo&list=RDAMVMN8VHBJooRwg -->
      <!-- Musica -->
 
-    <video class="videointro" src="./imgs/videointro.mp4"  autoplay muted></video>
-
-    <div class="container">
-        <div class="conteudo">
+     
+     <div class="container">
+         <div class="conteudo">
+            <video class="videointro" src="./imgs/videointro.mp4"  autoplay muted></video>
             <h1>Henrique Brasil</h1>
-            <ul href="#" class="">
+            <ul href="#" class="links">
                 <a class="instagram" href="https://www.instagram.com/henrique.designx/" target="_blank" rel="noopener noreferrer" title="@henrique.designx">
                     <li>
                         <span><img class="icon" src="imgs/instagram.png" alt=""></span>
@@ -49,13 +49,29 @@
                     </li>
                 </a>
             </ul>
-            <img src="" alt="">
 
             <div class="acessos">
                 <div class="buttons">
-                    <a class="btt-port" onclick="abrirModal()">Portfólio</a>
-                    <a class="btt-cur" onclick="abrirCurriculo()" target="_blank">Meu Currículo</a>
-                    <a class="btt-whats" href="https://api.whatsapp.com/send?phone=5511963365570" target="_blank">Entre em contato</a>
+                    <ul href="#">
+                        <a class="btt-port" onclick="abrirModal()">
+                            <li>
+                                <span class="text">Portfólio</span>
+                                <span><img class="icon" src="imgs/seta.png" alt=""></span>
+                            </li>
+                        </a>
+                        <a class="btt-cur" onclick="abrirCurriculo()" target="_blank"> 
+                            <li>
+                                <span class="text">Meu Currículo</span>
+                                <span><img class="icon" src="imgs/seta.png" alt=""></span>
+                            </li>
+                        </a>
+                        <a class="btt-whats" href="https://api.whatsapp.com/send?phone=5511963365570" target="_blank">
+                            <li>
+                                <span class="text">Entre em contato</span>
+                                <span><img class="icon" src="imgs/seta.png" alt=""></span>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
     
                 <!-- <a href="https://www.instagram.com/henrique.designx/" target="_blank" rel="noopener noreferrer" title="@henrique.designX">
