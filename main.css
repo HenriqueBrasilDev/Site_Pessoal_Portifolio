@@ -10,19 +10,19 @@ body{
     width: 100%;
     height: 100dvh;
     
-
     display: flex;
     justify-content: center;
     text-align: center;
+
+    background-image: url(imgs/walleu.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .container{
     width: 100%;
-
-
-    
     font-family: roboto;
-
     
     display: flex;
     justify-content: center;
@@ -30,25 +30,18 @@ body{
 
 .conteudo{
     width: 100%;
-    max-width: 400px;
-
+    max-width: 60vh;
     margin: 30px 20px;
-
-
-    background-image: url(imgs/walleu4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
     position: relative;
-
-    
     border-radius: 40px;
     border: solid 1px white;
     box-shadow: 0px 0px 20px 5px black;
     
     display: flex;
     flex-direction: column;
+
+    /* backdrop-filter: blur(2px); */
+
 }
 
 
@@ -65,10 +58,10 @@ body{
 
 
 .conteudo h1{
-    margin: 50px 0 0px 0;
+    margin: 150px 0 250px 0;
     padding: 5px 5px;
 
-    font-size: 2.5em;
+    font-size: 3em;
     color: white;
     text-shadow: 0px 3px 3px black;
 
@@ -91,10 +84,10 @@ body{
 
 .acessos{
     margin-top: auto;
-    margin-bottom: 30px;
-
+    margin-bottom: auto;
     display: flex;
     justify-content: center;
+
 }
 
 .buttons{
@@ -119,6 +112,91 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* Links */
+
+ul.links{
+    padding: 0% 5%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 100px;
+
+    
+}
+
+ul.links li{
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+    
+    transition: 1s;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.links li span{
+    position: absolute;
+}
+
+ul.links li:hover{
+    width: 100px;
+}
+
+ul.links li .icon{
+    width: 25px;
+    transition: 1s;
+    transition-delay: .2s;
+    
+}
+
+ul.links li .text{
+    color: rgb(255, 255, 255);
+    transform: scale(0);
+    transition: 1s;
+    transition-delay: .2s;
+
+    font-family: roboto;
+}
+
+ul.links li:hover .text{
+    transform: scale(1);
+}
+
+ul.links li:hover .icon{
+    transform: scale(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Acessos */
 
 .acessos ul{
     
@@ -185,60 +263,46 @@ ul li:hover ::before{
 
 
 
-/* Links */
 
-ul.links{
-    padding: 0% 5%;
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
 
-}
 
-ul.links li{
-    width: 50px;
-    height: 50px;
-    border-radius: 60px;
 
-    transition: 1s;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-ul.links li span{
-    position: absolute;
-}
 
-ul.links li:hover{
-    width: 100px;
-}
 
-ul.links li .icon{
-    width: 25px;
-    transition: 1s;
-    transition-delay: .2s;
 
-}
 
-ul.links li .text{
-    color: rgb(255, 255, 255);
-    transform: scale(0);
-    transition: 1s;
-    transition-delay: .2s;
 
-    font-family: roboto;
-}
 
-ul.links li:hover .text{
-    transform: scale(1);
-}
 
-ul.links li:hover .icon{
-    transform: scale(0);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* JANELA POP UP DO BOTÃO PORTIFÓLIO */
@@ -330,6 +394,15 @@ ul.links li:hover .icon{
 
     z-index: 999;
 }
+
+
+
+
+
+
+
+
+
 
 
 /* Janela Curriculo */
