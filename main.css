@@ -58,7 +58,7 @@ body{
 
 
 .conteudo h1{
-    margin: 150px 0 250px 0;
+    margin: 100px 0 0 0;
     padding: 5px 5px;
 
     font-size: 3em;
@@ -103,7 +103,7 @@ body{
     align-items: center;
     display: block;
     color: white;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     border: solid white 1px;
 
 
