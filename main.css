@@ -28,6 +28,16 @@ body{
     justify-content: center;
 }
 
+
+
+
+
+
+
+
+
+
+
 .conteudo{
     width: 100%;
     max-width: 60vh;
@@ -58,7 +68,7 @@ body{
 
 
 .conteudo h1{
-    margin: 100px 0 0 0;
+    margin: 2em 0 0 0;
     padding: 5px 5px;
 
     font-size: 2.5em;
@@ -83,10 +93,13 @@ body{
 
 
 .acessos{
+    position: absolute;
+    width: 100%;
     margin-top: auto;
     margin-bottom: auto;
     display: flex;
     justify-content: center;
+    z-index: -1000;
 
 }
 
@@ -126,20 +139,19 @@ body{
 /* Links */
 
 ul.links{
-    padding: 0% 5%;
+    position: relative;
+    top: 70%;
     list-style-type: none;
     display: flex;
     justify-content: center;
 
-    margin-bottom: 100px;
-
-    
 }
 
 ul.links li{
-    width: 50px;
+    width: 75px;
     height: 50px;
     border-radius: 60px;
+    margin-bottom: 100px;
     
     transition: 1s;
     
@@ -199,19 +211,21 @@ ul.links li:hover .icon{
 /* Acessos */
 
 .acessos ul{
-    
+    position: relative;
+    top: 30%;
+    height: 100vh;
 }
 
 .acessos li{
     height: 6vh;
     border-radius: 60px;
-
+    
     transition: 1s;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     text-shadow: black ;
 }
 
