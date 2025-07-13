@@ -101,8 +101,6 @@ body{
     margin-bottom: auto;
     display: flex;
     justify-content: center;
-    z-index: -1000;
-
 }
 
 .buttons{
