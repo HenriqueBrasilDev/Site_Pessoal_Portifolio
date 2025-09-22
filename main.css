@@ -1,0 +1,29 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;    /* centraliza verticalmente */
+    background: #000000;
+}
+
+.contain{
+    text-align: center;
+}
+
+img {
+    max-width: 10vw;
+    max-height: 10vh;
+    height: auto;
+    width: auto;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.87);
+    font-family: Poppins;
+    font-weight: 500;
+}
