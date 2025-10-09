@@ -242,6 +242,22 @@ main .sobre p{
 
 
 
+.main .skills{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+main .skills h1{
+    font-family: Poppins;
+    font-size: 3em;
+    position: relative;
+    text-align: right;
+    
+}
+
+
+
 
 
 
@@ -285,3 +301,8 @@ main .sobre p{
     background-color: white;
     position: absolute;
 }
+
+
+
+
+
