@@ -269,11 +269,11 @@ main .skills ul{
     display: flex;
     gap: 20px;
     align-items: center;
-    animation: animação 30s linear infinite;
 }
 
 main .skills ul li{
     flex: 0 0 auto;
+    animation: animação 10s linear infinite;
 }
 
 main .skills ul li img{
@@ -326,8 +326,9 @@ main .skills ul li p{
 
 @keyframes animação{
     0%{ transform: translateY(0px);}
-    100%{ transform: translateX(-200%);}
+    100%{ transform: translateX(-1700%);}
 }
+
 
 
 
