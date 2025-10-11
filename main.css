@@ -108,7 +108,7 @@ nav a:hover::before{
 main{
     width: 80%;
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 2%;
     
     color: white;
     position: relative;
@@ -177,18 +177,23 @@ main .conteudo .btt a:hover{
 
 
 
-.icons{
+main .conteudo .icons{
     display: flex;
     gap: 25px;
     list-style: none;
-    padding-top: 150px;
+    padding: 150px 0 0 10px;
 }
 
-.icons li a img{
+main .conteudo .icons li a img{
     width: 40px;
     height: 40px;
     cursor: pointer;
     transition: transform 0.3s ease-out;
+}
+
+main .conteudo .icons li:hover{
+    transition: ease-in 0.3s;
+    transform: scale(1.2);
 }
 
 
@@ -237,19 +242,56 @@ main .sobre p{
 
 
 
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 150px;
+}
+
+.footer h2{
+    position: relative;
+}
+
+.footer .h2::before{
+    content: "";
+
+    width: 30%;
+    height: 3px;
+    left: 0;
+    bottom: -2px;
+    background-color: white;
+    position: absolute;
+}
+
+.footer .h2::after{
+    content: "";
+
+    width: 30%;
+    height: 3px;
+    right: 0;
+    bottom: -2px;
+    background-color: white;
+    position: absolute;
+}
+
+
+
+
+
+
 
 main .skills{
     width: 50%;
     max-width: 600px;
     text-align: right;
     margin-left: auto;
-
+    text-align: center;
     
 }
 
 main .skills h1{
     font-family: Poppins;
-    font-size: 3em;
+    font-size: 2em;
     position: relative;
     display: inline-block;
 }
@@ -273,7 +315,7 @@ main .skills ul{
 
 main .skills ul li{
     flex: 0 0 auto;
-    animation: animação 10s linear infinite;
+    animation: animação 15s linear infinite;
 }
 
 main .skills ul li img{
@@ -324,42 +366,133 @@ main .skills ul li p{
     position: relative;
 }
 
-@keyframes animação{
+@keyframes animação {
     0%{ transform: translateY(0px);}
-    100%{ transform: translateX(-1700%);}
+    100%{ transform: translateX(-1875%);}
 }
 
 
 
 
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 150px;
-}
 
-.footer h2{
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .projetos h1{
+    font-family: Poppins;
+    font-size: 3em;
     position: relative;
+    display: inline-block;
 }
 
-.footer .h2::before{
+main .projetos h1::before{
     content: "";
 
-    width: 30%;
+    width: 100%;
     height: 3px;
+    bottom: 0;
+    background-color: white;
+    position: absolute;
+}
+
+main .projetos .title{
+    font-family: Poppins;
+    font-size: 2em;
+}
+
+
+
+
+
+
+main .projetos .carousel{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 50px;
+
+    background-color: red;
+}
+
+main .projetos .carousel .carousel-item{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    left: 75%;
+
+    
+    transition: transform 0.3s ease-out;
+}
+
+main .projetos .carousel .carousel-item:nth-child(1),
+main .projetos .carousel .carousel-item:nth-child(2){
+    width: 70%;
+    height: 660px;
+    top: 0;
     left: 0;
-    bottom: -2px;
-    background-color: white;
+    cursor: pointer;
+    background-size: cover;
     position: absolute;
+    
+    transition: transform 0.3s ease-out;
 }
 
-.footer .h2::after{
-    content: "";
+main .projetos .carousel .carousel-item:nth-child(2):hover{
+    opacity: 1;
+}
 
-    width: 30%;
-    height: 3px;
-    right: 0;
-    bottom: -2px;
-    background-color: white;
-    position: absolute;
+main .projetos .carousel .carousel-item:nth-child(3){
+    top: calc(0%);
+}
+
+main .projetos .carousel .carousel-item:nth-child(4){
+    top: calc(0% + 220px);
+
+}
+
+main .projetos .carousel .carousel-item:nth-child(5){
+    top: calc(0% + 440px);
+}
+
+
+
+
+main .projetos .carousel .carousel-item h2{
+    font-family: Poppins;
+    font-size: 2em;
+    color: white;
+    padding: 100px 0 0 30px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+main .projetos .carousel .carousel-item img{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    margin: 20px 0 0 30px;
+
+}
+
+main .projetos .carousel .carousel-item p{
+    font-family: Poppins;
+    font-size: 1.2em;
+    color: white;
+    padding: 0 30px;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 0px 30px;
+    width: 500px;
 }
