@@ -7,6 +7,7 @@
 }
 
 html, body {
+    width: 100vw;
     height: 100vh;
     margin: 0;
 }
@@ -108,7 +109,6 @@ nav a:hover::before{
 main{
     width: 80%;
     margin: 0 auto;
-    padding-top: 2%;
     
     color: white;
     position: relative;
@@ -116,7 +116,7 @@ main{
 
 
 main .conteudo{
-    
+    padding-top: 10%;
 }
 
 main .conteudo h1{
@@ -206,6 +206,7 @@ main .sobre{
 
     top: 0;
     position: relative;
+    padding-top: 10%;
 }
 
 main .sobre > h1{
@@ -286,7 +287,7 @@ main .skills{
     text-align: right;
     margin-left: auto;
     text-align: center;
-    
+    padding-top: 10%;
 }
 
 main .skills h1{
@@ -384,9 +385,10 @@ main .skills ul li p{
 
 
 
-
-
-
+main .projetos{
+    height: 100vh;
+    margin-top: 6%;
+}
 
 main .projetos h1{
     font-family: Poppins;
@@ -403,11 +405,13 @@ main .projetos h1::before{
     bottom: 0;
     background-color: white;
     position: absolute;
+
 }
 
 main .projetos .title{
     font-family: Poppins;
     font-size: 2em;
+
 }
 
 
@@ -417,42 +421,33 @@ main .projetos .title{
 
 main .projetos .carousel{
     width: 100%;
-    height: 100vh;
+    height: 60%;
+    margin-top: 3%;
     position: relative;
-    margin-top: 50px;
-
-    background-color: red;
 }
 
 main .projetos .carousel .carousel-item{
-    width: 300px;
-    height: 200px;
+    width: 30%;
+    height: 30%;
     border-radius: 20px;
     cursor: pointer;
     background-size: cover;
     position: absolute;
-    background-position: center;
-    left: 75%;
-
-    
+    background-position: contain;
+    right: 0;
     transition: transform 0.3s ease-out;
 }
 
 main .projetos .carousel .carousel-item:nth-child(1),
 main .projetos .carousel .carousel-item:nth-child(2){
-    width: 70%;
-    height: 660px;
+    width: 68%;
+    height: 100%;
     top: 0;
     left: 0;
     cursor: pointer;
-    background-size: cover;
     position: absolute;
-    
+    background-size: cover;
     transition: transform 0.3s ease-out;
-}
-
-main .projetos .carousel .carousel-item:nth-child(2):hover{
-    opacity: 1;
 }
 
 main .projetos .carousel .carousel-item:nth-child(3){
@@ -460,39 +455,63 @@ main .projetos .carousel .carousel-item:nth-child(3){
 }
 
 main .projetos .carousel .carousel-item:nth-child(4){
-    top: calc(0% + 220px);
+    top: calc(0% + 35%);
 
 }
 
 main .projetos .carousel .carousel-item:nth-child(5){
-    top: calc(0% + 440px);
+    top: calc(0% + 70%);
 }
-
-
 
 
 main .projetos .carousel .carousel-item h2{
     font-family: Poppins;
     font-size: 2em;
     color: white;
-    padding: 100px 0 0 30px;
-    text-shadow: 2px 2px 4px #000000;
+    padding: 70px 0 0 30px;
+    z-index: 1;
+    position: relative;
 }
+
 
 main .projetos .carousel .carousel-item img{
     width: 60px;
     height: 60px;
     margin: 10px;
     margin: 20px 0 0 30px;
-
+    z-index: 1;
+    position: relative;
 }
 
 main .projetos .carousel .carousel-item p{
+    width: 400px;
     font-family: Poppins;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
     padding: 0 30px;
-    text-shadow: 2px 2px 4px #000000;
     padding: 0px 30px;
-    width: 500px;
+    position: relative;
+}
+
+main .projetos .carousel .carousel-item .text{
+    
+    opacity: 0;
+}
+
+main .projetos .carousel .carousel-item:nth-child(2)  .text:hover{
+    opacity: 1;
+    transition: 2s ease;
+    transition-delay: 0.5s;
+}
+
+main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 0;
 }
