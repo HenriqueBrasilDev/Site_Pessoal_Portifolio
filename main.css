@@ -387,7 +387,8 @@ main .skills ul li p{
 
 main .projetos{
     height: 100vh;
-    margin-top: 6%;
+    margin-top: 3%;
+    position: relative;
 }
 
 main .projetos h1{
@@ -421,33 +422,43 @@ main .projetos .title{
 
 main .projetos .carousel{
     width: 100%;
-    height: 60%;
-    margin-top: 3%;
+    height: 70%;
+    margin-top: 2%;
     position: relative;
 }
 
 main .projetos .carousel .carousel-item{
     width: 30%;
-    height: 30%;
+    height: 20%;
     border-radius: 20px;
     cursor: pointer;
     background-size: cover;
+    background-position: center;
     position: absolute;
     background-position: contain;
+    background-position-y: 0;
+    top: 0;
     right: 0;
     transition: transform 0.3s ease-out;
+    align-items: center;
+    transform: translateY(-10px);
+    z-index: 3;
+    transition: 1s;
 }
 
 main .projetos .carousel .carousel-item:nth-child(1),
 main .projetos .carousel .carousel-item:nth-child(2){
     width: 68%;
     height: 100%;
-    top: 0;
-    left: 0;
+    background-repeat: no-repeat;
+    margin-right: 35%;
     cursor: pointer;
     position: absolute;
-    background-size: cover;
+    background-size: contain;
     transition: transform 0.3s ease-out;
+    transform: translate(0, 0);
+    transition: 1s;
+    z-index: 5;
 }
 
 main .projetos .carousel .carousel-item:nth-child(3){
@@ -455,20 +466,26 @@ main .projetos .carousel .carousel-item:nth-child(3){
 }
 
 main .projetos .carousel .carousel-item:nth-child(4){
-    top: calc(0% + 35%);
+    top: calc(0% + 21%);
 
 }
 
 main .projetos .carousel .carousel-item:nth-child(5){
-    top: calc(0% + 70%);
+    top: calc(0% + 43%);
 }
+
+main .projetos .carousel .carousel-item:nth-child(5){
+    top: calc(0% +85%);
+}
+
+
 
 
 main .projetos .carousel .carousel-item h2{
     font-family: Poppins;
     font-size: 2em;
     color: white;
-    padding: 70px 0 0 30px;
+    padding-top: 70px;
     z-index: 1;
     position: relative;
 }
@@ -477,8 +494,7 @@ main .projetos .carousel .carousel-item h2{
 main .projetos .carousel .carousel-item img{
     width: 60px;
     height: 60px;
-    margin: 10px;
-    margin: 20px 0 0 30px;
+    margin-top: 20px;
     z-index: 1;
     position: relative;
 }
@@ -488,19 +504,22 @@ main .projetos .carousel .carousel-item p{
     font-family: Poppins;
     font-size: 1em;
     color: white;
-    padding: 0 30px;
-    padding: 0px 30px;
     position: relative;
 }
 
 main .projetos .carousel .carousel-item .text{
-    
+    padding-left: 50px;
     opacity: 0;
+}
+
+main .projetos .carousel .carousel-item .text a{
+    text-decoration: none;
+    
 }
 
 main .projetos .carousel .carousel-item:nth-child(2)  .text:hover{
     opacity: 1;
-    transition: 2s ease;
+    transition: 1s ease;
     transition-delay: 0.5s;
 }
 
@@ -514,4 +533,60 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 0;
+}
+
+
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 4;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background: white;
+    color: black;
+}
+
+
+
+
+
+.carousel .timeRunning{
+    position: absolute;
+    z-index: 4;
+    height: 4px;
+    background-color: green;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+    z-index: 7;
+}
+
+@keyframes runningTime{
+
+    from{width: 0%}
+    to{width: 100%}
+
 }
