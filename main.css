@@ -280,14 +280,18 @@ main .sobre p{
 
 
 
-
 main .skills{
-    width: 50%;
-    max-width: 600px;
-    text-align: right;
-    margin-left: auto;
+    width: 100%;
+    padding-top: 150px;
+    display: flex;
+    justify-content: right;
+}
+
+.container-skills{
+    width: 500px;
+    height: 100vh;
     text-align: center;
-    padding-top: 10%;
+    
 }
 
 main .skills h1{
@@ -309,10 +313,18 @@ main .skills h1::before{
 }
 
 main .skills ul{
+    width: calc(80px*5+80);
     display: flex;
     gap: 20px;
     align-items: center;
+    margin: 0 auto;
+    padding: 20px 0 150px 0;
+
+
 }
+
+
+
 
 main .skills ul li{
     flex: 0 0 auto;
@@ -329,35 +341,47 @@ main .skills ul li img{
     transition: transform 0.3s ease-out;
 }
 
-main .skills ul li.select img{
-    width: 100px;
-    height: 100px;
-    opacity: 1;
+main .skills ul li:nth-child(3) img{
+    width: 90px;
+    height: 90px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-main .skills ul li.select h3{
-    opacity: 1;
-}
 
 main .skills ul li h3{
     font-family: Poppins;
     font-size: 0.8em;
     text-align: center;
     position: relative;
-    padding: 3px 0;
-    opacity: 0;
+    padding: 5px 0;
 }
 
 main .skills ul li h3:before{
     content: "";
 
-    width: 80%;
-    height: 2px;
+    width: 48%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    text-align: center;
+}
+
+main .skills ul li h3:after{
+    content: "";
+
+    width: 100%;
+    height: 3px;
     position: absolute;
     bottom: 0;
     left: 10%;
     background-color: white;
     text-align: center;
+    opacity: 34%;
 }
 
 main .skills ul li p{
@@ -367,10 +391,31 @@ main .skills ul li p{
     position: relative;
 }
 
-@keyframes animação {
+@keyframes  a{
     0%{ transform: translateY(0px);}
     100%{ transform: translateX(-1875%);}
 }
+
+
+
+
+
+.soft-skills{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -406,7 +451,6 @@ main .projetos h1::before{
     bottom: 0;
     background-color: white;
     position: absolute;
-
 }
 
 main .projetos .title{
