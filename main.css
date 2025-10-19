@@ -563,7 +563,11 @@ main .projetos .carousel .carousel-item .text a{
 
 main .projetos .carousel .carousel-item:nth-child(2)  .text:hover{
     opacity: 1;
+<<<<<<< HEAD
     transition: 1s ease;
+=======
+    transition: 2s ease;            
+>>>>>>> ec0d001 (reponsividade pc - projetos)
     transition-delay: 0.5s;
 }
 
