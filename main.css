@@ -285,14 +285,17 @@ main .skills{
     padding-top: 150px;
     display: flex;
     justify-content: right;
+    position: relative;
 }
 
 .container-skills{
-    width: 500px;
-    height: 100vh;
+    width: 50%;
+    overflow: hidden;
     text-align: center;
-    
 }
+
+
+
 
 main .skills h1{
     font-family: Poppins;
@@ -313,14 +316,16 @@ main .skills h1::before{
 }
 
 main .skills ul{
-    width: calc(80px*5+80);
+    width: calc(80px*5+70);
+
+
+
+
     display: flex;
     gap: 20px;
     align-items: center;
     margin: 0 auto;
     padding: 20px 0 150px 0;
-
-
 }
 
 
@@ -328,7 +333,7 @@ main .skills ul{
 
 main .skills ul li{
     flex: 0 0 auto;
-    animation: animação 15s linear infinite;
+    animation: animação 1s linear infinite;
 }
 
 main .skills ul li img{
@@ -341,14 +346,6 @@ main .skills ul li img{
     transition: transform 0.3s ease-out;
 }
 
-main .skills ul li:nth-child(3) img{
-    width: 90px;
-    height: 90px;
-    padding-bottom: 10px;
-    text-align: center;
-    margin: 0 auto;
-    justify-content: center;
-}
 
 
 main .skills ul li h3{
@@ -391,9 +388,9 @@ main .skills ul li p{
     position: relative;
 }
 
-@keyframes  a{
-    0%{ transform: translateY(0px);}
-    100%{ transform: translateX(-1875%);}
+@keyframes a{
+    0%{}
+    100%{ transform: translateX(-100%);}
 }
 
 
@@ -456,7 +453,6 @@ main .projetos h1::before{
 main .projetos .title{
     font-family: Poppins;
     font-size: 2em;
-
 }
 
 
@@ -563,11 +559,7 @@ main .projetos .carousel .carousel-item .text a{
 
 main .projetos .carousel .carousel-item:nth-child(2)  .text:hover{
     opacity: 1;
-<<<<<<< HEAD
     transition: 1s ease;
-=======
-    transition: 2s ease;            
->>>>>>> ec0d001 (reponsividade pc - projetos)
     transition-delay: 0.5s;
 }
 

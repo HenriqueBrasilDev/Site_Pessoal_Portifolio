@@ -7,7 +7,7 @@ var nextBtn = document.querySelector('.next'),
     runningTime = document.querySelector('.timeRunning')
 
 let timeRunning = 3000
-let timeAutoNext = 7000
+let timeAutoNext = 7000 
 
 nextBtn.onclick = function(){
     showSlider('next')
@@ -35,8 +35,6 @@ function resetTimeAnimation (){
     runningTime.style.animation = null
     runningTime.style.animation = 'runningTime 7s linear 1 forwards'
 }
-
-
 
 
 
@@ -75,9 +73,13 @@ function showSlider(type) {
 
 resetTimeAnimation()
 
+document.addEventListener("DOMContentLoaded", () => {
+    let index = 0;
+    const carousel = document.querySelector(".hard-skills");
+    const totalSlides = document.querySelectorAll(".hard-skills li").length;
 
-
-
-
-
-
+    setInterval(() => {
+        index = (index + 1) % totalSlides;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+});
