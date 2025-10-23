@@ -9,13 +9,15 @@ var nextBtn = document.querySelector('.next'),
 let timeRunning = 3000
 let timeAutoNext = 7000 
 
-nextBtn.onclick = function(){
+if (nextBtn) {
+    nextBtn.onclick = function(){
     showSlider('next')
-}
- 
-prevBtn.onclick = function(){
-    showSlider('prev')
-}
+    }
+    
+    prevBtn.onclick = function(){
+        showSlider('prev')
+    }
+
 
 
 
@@ -69,17 +71,29 @@ function showSlider(type) {
     resetTimeAnimation()
 }
 
-
-
 resetTimeAnimation()
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-    let index = 0;
-    const carousel = document.querySelector(".hard-skills");
-    const totalSlides = document.querySelectorAll(".hard-skills li").length;
+
+
+if (document.querySelector(".hard-skills")) {
+    let indexx = 0;
+    const carousel = document.querySelectorAll(".hard-skills li");
+
+    const destaque1 = document.querySelector(".hard-skills .li").length;
+    const destaque2 = document.querySelector(".hard-skills .li p.selected");
+    const destaque3 = document.querySelector(".hard-skills .li h3.selected");
 
     setInterval(() => {
-        index = (index + 1) % totalSlides;
-        carousel.style.transform = `translateX(-${index * 100}%)`;
+        indexx = (indexx + 1) % carousel.length;
+        
+        carousel.forEach((item, i) => {
+            item.style.transform = `translateX(-${indexx * 100}%)`;
+        });
+
+        destaque1.classList.add("selected");
+        destaque2.classList.add("selected");
+        destaque3.classList.add("selected");
+
     }, 4000);
-});
+}
