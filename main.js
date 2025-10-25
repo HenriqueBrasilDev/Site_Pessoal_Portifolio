@@ -7,13 +7,13 @@ var nextBtn = document.querySelector('.next'),
     runningTime = document.querySelector('.timeRunning')
 
 let timeRunning = 3000
-let timeAutoNext = 7000 
+let timeAutoNext = 7000
 
 if (nextBtn) {
     nextBtn.onclick = function(){
     showSlider('next')
     }
-    
+
     prevBtn.onclick = function(){
         showSlider('prev')
     }
@@ -70,27 +70,67 @@ if (nextBtn) {
 
 
 if (document.querySelector(".hard-skills")) {
+    const carousel = document.querySelectorAll('.hard-skills li');
+    const list = document.querySelector('.hard-skills');
     let indexx = 0;
-    const carousel = document.querySelectorAll(".hard-skills li");
-    
-    // const destaque1 = document.querySelector(".hard-skills .li").length;
-    // const destaque2 = document.querySelector(".hard-skills .li p");
-    // const destaque3 = document.querySelector(".hard-skills .li h3");
-    
-    setInterval(() => {
-        indexx = (indexx + 1) % carousel.length;
-        
-        carousel.forEach(item => item.classList.remove('selected'));
 
-        carousel[indexx+3].classList.add('selected');
+
+    setInterval(() => {
+        indexx = (indexx + 1);
+        console.log(`indexx + 1`);
+
+        if (indexx === 0) {
+
+            carousel.forEach((item, i) => {
+                carousel.style.transition = `none`;
+            });
+        }
+
+
 
         carousel.forEach((item, i) => {
             item.style.transform = `translateX(-${indexx * 100}px)`;
         });
 
-        
-        // destaque2.classList.add("selected");
-        // destaque3.classList.add("selected");
 
-    }, 4000);
+        carousel.forEach((item, i) => {
+            const img = item.querySelector('img');
+            img.classList.toggle('selected', i === indexx+3);
+        });
+
+
+        if (indexx >= 5) {
+            indexx = 0;
+            console.log(indexx);
+
+            carousel.forEach((item, i) => {
+                item.style.transition = `none`;
+                item.style.transform = `translateX(-${indexx * 100}px)`;
+            });
+
+            carousel.forEach((item, i) => {
+                const img = item.querySelector('img');
+                img.classList.toggle('selected', i === 3);
+            });
+            
+
+            // carousel.forEach((item, i) => {
+            //     img.classList.toggle('selected', i === 3);
+            //     console.log(`Transition removed`);
+            // });
+            
+            // carousel.forEach((item, i) => {
+            //     item.style.transform = `translateX(-${indexx * 100}px)`;
+            // });
+
+        }else {
+            carousel.forEach((item, i) => {
+                item.style.transition = `transform 1s ease-in-out`;
+            });
+        }
+
+        
+
+    }, 2000);
+
 }
