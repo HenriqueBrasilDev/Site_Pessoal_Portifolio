@@ -328,8 +328,8 @@ main .skills ul{
 main .skills ul li{
     flex: 0 0 auto;
     position: relative;
+    transition: ease-in 1s;
 }
-
 
 
 main .skills ul li img{
@@ -386,16 +386,18 @@ main .skills ul li p{
     margin-top: 7px;
 }
 
+
 main .skills ul li.selected{
     width: 80px;
     height: 130px;
     transform: scale(1.3);
     color: white;
     opacity: 1;
-
 }
 
-main .skills ul li h3.selected{
+
+
+/* main .skills ul li h3.selected{
     opacity: 1;
     transition: ease-in 1.3s;
     animation: gotah3 0.5s forwards;
@@ -404,10 +406,11 @@ main .skills ul li h3.selected{
 main .skills ul li p.selected{
     opacity: 1;
     animation: gotap 0.5s forwards;
-}
+} */
 
 
-@keyframes gotah3{
+
+/* @keyframes gotah3{
     from{transform: scale(0.5); opacity: 0; display: inline-block; position: absolute; width: 100%; margin: 20px; left: 0;}
     to{transform: scale(1.35); opacity: 1;}
 }
@@ -415,7 +418,7 @@ main .skills ul li p.selected{
 @keyframes gotap{
     from{transform: scale(0.3); opacity: 0; display: inline-block; position: absolute; width: 100%; margin: 20px; left: 0;}
     to{transform: scale(1); opacity: 1;}
-}
+} */
 
 
 
