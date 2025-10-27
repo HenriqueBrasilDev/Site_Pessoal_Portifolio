@@ -7,13 +7,13 @@ var nextBtn = document.querySelector('.next'),
     runningTime = document.querySelector('.timeRunning')
 
 let timeRunning = 3000
-let timeAutoNext = 7000
+let timeAutoNext = 7000 
 
 if (nextBtn) {
     nextBtn.onclick = function(){
     showSlider('next')
     }
-
+    
     prevBtn.onclick = function(){
         showSlider('prev')
     }
@@ -72,65 +72,75 @@ if (nextBtn) {
 if (document.querySelector(".hard-skills")) {
     const carousel = document.querySelectorAll('.hard-skills li');
     const list = document.querySelector('.hard-skills');
-    let indexx = 0;
+    let ico_select = 0;
+    let time = 0;
+    
 
 
-    setInterval(() => {
-        indexx = (indexx + 1);
-        console.log(`indexx + 1`);
+    function RodarCarrousel(){
+        time = 4000;
+        ico_select = (ico_select + 1);
+        
 
-        if (indexx === 0) {
-
-            carousel.forEach((item, i) => {
-                carousel.style.transition = `none`;
-            });
-        }
-
+        // if (ico_select == 0) {
+        //     carousel.forEach((item, i) => {
+        //         item.style.transition = `none`;
+        //     });
+        // }
 
 
         carousel.forEach((item, i) => {
-            item.style.transform = `translateX(-${indexx * 100}px)`;
+            item.style.transform = `translateX(-${ico_select * 100}px)`;
         });
 
 
         carousel.forEach((item, i) => {
             const img = item.querySelector('img');
-            img.classList.toggle('selected', i === indexx+3);
+            img.classList.toggle('selected', i === ico_select+3);
+
+            const texto1 = item.querySelector('h3');
+            texto1.classList.toggle('selected', i === ico_select+3);
+
+            const texto2 = item.querySelector('p');
+            texto2.classList.toggle('selected', i === ico_select+3);
         });
 
 
-        if (indexx >= 5) {
-            indexx = 0;
-            console.log(indexx);
-
-            carousel.forEach((item, i) => {
-                item.style.transition = `none`;
-                item.style.transform = `translateX(-${indexx * 100}px)`;
-            });
+        if (ico_select >= 15) {
+            time = 0;
 
             carousel.forEach((item, i) => {
                 const img = item.querySelector('img');
-                img.classList.toggle('selected', i === 3);
+                img.classList.toggle('selected', i === ico_select+3 || i === 3);
+
+                const texto1 = item.querySelector('h3');
+                texto1.classList.toggle('selected', i === ico_select+3 || i === 3);
+
+                const texto2 = item.querySelector('p');
+                texto2.classList.toggle('selected', i === ico_select+3 || i === 3);
             });
-            
+        }
 
-            // carousel.forEach((item, i) => {
-            //     img.classList.toggle('selected', i === 3);
-            //     console.log(`Transition removed`);
-            // });
-            
-            // carousel.forEach((item, i) => {
-            //     item.style.transform = `translateX(-${indexx * 100}px)`;
-            // });
 
+        if (ico_select >= 16) {
+            ico_select = 0;
+            time = 0;
+            console.log(ico_select);
+            carousel.forEach((item, i) => {
+                item.style.transition = `none`;
+                item.style.transform = `translateX(20px)`;
+
+                const texto1 = item.querySelector('h3');
+                texto1.classList.toggle('selected', i === ico_select+3);
+            });
         }else {
             carousel.forEach((item, i) => {
                 item.style.transition = `transform 1s ease-in-out`;
             });
         }
+        setTimeout(RodarCarrousel, time);
+    }
 
-        
-
-    }, 2000);
+    RodarCarrousel();
 
 }

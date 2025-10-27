@@ -325,7 +325,7 @@ main .skills ul{
 
 main .skills ul li{
     flex: 0 0 auto;
-    height: 100px;
+    height: 150px;
     position: relative;
 }
 
@@ -339,7 +339,6 @@ main .skills ul li img{
     text-align: center;
     transition: ease-in 0.5s;
     transition-delay: 0.3s;
-
 }
 
 main .skills ul li h3{
@@ -361,7 +360,7 @@ main .skills ul li h3:before{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgb(9, 255, 0);
+    background-color: rgba(255, 255, 255, 0.445);
     text-align: center;
 }
 
@@ -373,7 +372,7 @@ main .skills ul li h3:after{
     position: absolute;
     bottom: 0;
     left: 0px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -387,6 +386,8 @@ main .skills ul li p{
 }
 
 
+
+
 main .skills ul li img.selected{
     width: 100px;
     height: 100px;
@@ -397,18 +398,16 @@ main .skills ul li img.selected{
     transition: ease-in 0.5s;
 }
 
-
-
-/* main .skills ul li h3.selected{
+main .skills ul li h3.selected{
     opacity: 1;
     transition: ease-in 1.3s;
     animation: gotah3 0.5s forwards;
-}
+} 
 
 main .skills ul li p.selected{
     opacity: 1;
     animation: gotap 0.5s forwards;
-} */
+} 
 
 
 
