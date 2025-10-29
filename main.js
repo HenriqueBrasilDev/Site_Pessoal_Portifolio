@@ -6,12 +6,13 @@ var nextBtn = document.querySelector('.next'),
     item = document.querySelector('.carousel-item'),
     runningTime = document.querySelector('.timeRunning')
 
-let timeRunning = 3000
-let timeAutoNext = 7000 
+    let timeRunning = 3000
+    let timeAutoNext = 7000 
 
-if (nextBtn) {
+
+if (document.querySelector('.projetos')) {
     nextBtn.onclick = function(){
-    showSlider('next')
+        showSlider('next')
     }
     
     prevBtn.onclick = function(){
@@ -76,17 +77,16 @@ if (document.querySelector(".hard-skills")) {
     let time = 0;
     
 
-
     function RodarCarrousel(){
         time = 4000;
         ico_select = (ico_select + 1);
         
 
-        // if (ico_select == 0) {
-        //     carousel.forEach((item, i) => {
-        //         item.style.transition = `none`;
-        //     });
-        // }
+        if (ico_select == 0) {
+            carousel.forEach((item, i) => {
+                item.style.transition = `none`;
+            });
+        }
 
 
         carousel.forEach((item, i) => {
