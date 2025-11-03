@@ -1,16 +1,16 @@
-var nextBtn = document.querySelector('.next'),
-    prevBtn = document.querySelector('.prev'),
+if (document.querySelector('.projetos')) {
+    var nextBtn = document.querySelector('.next'),
+        prevBtn = document.querySelector('.prev'),
 
-    carousel = document.querySelector('.projetos'),
-    list = document.querySelector('.carousel'),
-    item = document.querySelector('.carousel-item'),
-    runningTime = document.querySelector('.timeRunning')
+        carousel = document.querySelector('.projetos'),
+        list = document.querySelector('.carousel'),
+        item = document.querySelector('.carousel-item'),
+        runningTime = document.querySelector('.timeRunning')
 
     let timeRunning = 3000
-    let timeAutoNext = 7000 
+    let timeAutoNext = 7000
 
 
-if (document.querySelector('.projetos')) {
     nextBtn.onclick = function(){
         showSlider('next')
     }
@@ -30,7 +30,7 @@ if (document.querySelector('.projetos')) {
 
 
     function resetTimeAnimation (){
-        runningTime.style.animation = 'nome'
+        runningTime.style.animation = 'none'
         runningTime.offsetHeight
         runningTime.style.animation = null
         runningTime.style.animation = 'runningTime 7s linear 1 forwards'
@@ -82,7 +82,8 @@ if (document.querySelector(".hard-skills")) {
         ico_select = (ico_select + 1);
         
 
-        if (ico_select == 0) {
+        if (ico_select == 2) {
+            console.log("pego");
             carousel.forEach((item, i) => {
                 item.style.transition = `none`;
             });

@@ -10,6 +10,7 @@ html, body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    caret-color: transparent;
 }
 
 body{
@@ -434,7 +435,6 @@ main .skills .soft-skills{
 
 
 
-
 main .projetos{
     width: 100%;
     height: 100vh;
@@ -451,7 +451,22 @@ main .projetos h1{
 
 }
 
-main .projetos h1::before{
+main .timeRunning{
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    top: 70px;
+    animation: runningTime 3s linear 1 forwards;
+}
+
+@keyframes runningTime{
+    from{width: 0%}
+    to{width: 100%}
+}
+
+/* main .projetos h1::before{
     content: "";
 
     width: 100%;
@@ -459,7 +474,7 @@ main .projetos h1::before{
     bottom: 0;
     background-color: white;
     position: absolute;
-}
+} */
 
 main .projetos .title{
     font-family: Poppins;
@@ -483,54 +498,49 @@ main .projetos .carousel{
 main .projetos .carousel .carousel-item{
     width: 30%;
     height: 32%;
-    cursor: pointer;
-    background-size: cover;
-    background-position: center;
     position: absolute;
-    background-position-y: 0;
-    top: 0;
+    
     right: 0;
-    transition: transform 0.3s ease-out;
-    align-items: center;
-    transform: translateY(-10px);
-    z-index: 3;
-    transition: 1s;
+    transform: translateY(0);
+    
     border-radius: 20px;
+    background-size: cover;
+    background-position: 50% 50%;
 
+    transition: 1s;
+    align-items: center;    
+
+    cursor: pointer;
 }
 
-main .projetos .carousel .carousel-item:nth-child(1),
+main .projetos .carousel .carousel-item:nth-child(1){
+    width: 68%;
+    height: 100%;
+    right: 32%;
+    top: 0;
+}
+
 main .projetos .carousel .carousel-item:nth-child(2){
     width: 68%;
     height: 100%;
-    background-repeat: no-repeat;
     right: 32%;
-    position: absolute;
-    transition: transform 0.3s ease-out;
-    transform: translate(0, 0);
-    transition: 1s;
-    z-index: 5;
+    top: 0;
+    z-index: 1;
 }
 
 main .projetos .carousel .carousel-item:nth-child(3){
-    top: 2%;
-    z-index: 4;
+    top: 0;
 }
 
 main .projetos .carousel .carousel-item:nth-child(4){
-    top: 35.5%;
-    z-index: 3;
+    top: 34%;
 }
 
 main .projetos .carousel .carousel-item:nth-child(5){
-    top: 69%;
-    z-index: 2;
+    top: 68%;
+    z-index: -2;
 }
 
-main .projetos .carousel .carousel-item:nth-child(6){
-    top: 69%;
-    z-index: 0;
-}
 
 
 
@@ -604,7 +614,7 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
     text-align: center;
     position: absolute;
     justify-content: center;
-    top: 80%;
+    top: 90%;
     right: 58%;
     z-index: 4;
     max-width: 30%;
@@ -613,9 +623,9 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
 }
 
 .arrows button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: none;
@@ -626,8 +636,8 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
     transition: 0.5s;
     cursor: pointer;
     
-    opacity: 0.5;
-    transition: opacity 0.5s;
+    opacity: 0.8;
+    transition: opacity 0.8s;
 }
 
 .arrows button:hover{
@@ -637,26 +647,4 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
 .arrows button:hover{
     background: white;
     color: black;
-}
-
-
-
-
-
-.carousel .timeRunning{
-    position: absolute;
-    z-index: 4;
-    height: 4px;
-    background-color: green;
-    left: 0;
-    top: 0;
-    animation: runningTime 7s linear 1 forwards;
-    z-index: 7;
-}
-
-@keyframes runningTime{
-
-    from{width: 0%}
-    to{width: 100%}
-
 }
