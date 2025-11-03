@@ -544,7 +544,6 @@ main .projetos .carousel .carousel-item:nth-child(5){
 
 
 
-
 main .projetos .carousel .carousel-item h2{
     font-family: Poppins;
     font-size: 2em;
@@ -552,41 +551,40 @@ main .projetos .carousel .carousel-item h2{
     padding-top: 70px;
     z-index: 1;
     position: relative;
-
-    display: none;
 }
-
 
 main .projetos .carousel .carousel-item img{
     width: 60px;
     height: 60px;
     z-index: 1;
     position: relative;
-    
 }
 
-
-
-main .projetos .carousel .carousel-item p{
-    width: 400px;
-    font-family: Poppins;
-    font-size: 1em;
-    color: white;
-    position: relative;
-
-    display: none;
-}
 
 main .projetos .carousel .carousel-item .text{
     padding-left: 50px;
     opacity: 0;
+}
 
-    display: none;
+main .projetos .carousel .carousel-item h1{
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    top: -50px;
+    left: 0;
+    z-index: 20;
 }
 
 main .projetos .carousel .carousel-item .text a{
     text-decoration: none;
+}
 
+main .projetos .carousel .carousel-item .text p{
+    max-width: 50%;
+    font-family: Poppins;
+    font-size: 1em;
+    color: white;
+    position: relative;
 }
 
 main .projetos .carousel .carousel-item:nth-child(2)  .text:hover{
@@ -595,7 +593,7 @@ main .projetos .carousel .carousel-item:nth-child(2)  .text:hover{
     transition-delay: 0.5s;
 }
 
-main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
+main .projetos .carousel .carousel-item:nth-child(2) .text::before{
     content: "";
 
     width: 100%;
@@ -605,6 +603,7 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 0;
+
 }
 
 
@@ -614,17 +613,17 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
     text-align: center;
     position: absolute;
     justify-content: center;
-    top: 90%;
-    right: 58%;
+    top: 80%;
+    right: 59.5%;
     z-index: 4;
     max-width: 30%;
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .arrows button{
     width: 100px;
-    height: 25px;
+    height: 40px;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -633,14 +632,15 @@ main .projetos .carousel .carousel-item:nth-child(2) .text:hover::before{
     font-size: 16px;
     font-family: monospace;
     font-weight: bold;
-    transition: 0.5s;
     cursor: pointer;
     
     opacity: 0.8;
     transition: opacity 0.8s;
+    transition: 0.5s ease-in;
 }
 
 .arrows button:hover{
+    font-size: 25px;
     opacity: 1;
 }
 
