@@ -469,8 +469,8 @@ ul li:hover ::before{
 }
 
 .baixar-curriculo img{
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     
     padding: 7.5px;
     
@@ -528,7 +528,7 @@ ul li:hover ::before{
 
 .bttSimples,
 .bttCaprichado{
-    width: 100px;
+    width: 150px;
     height: 40px;
 
     margin-right: 10px;
