@@ -21,31 +21,30 @@ function abrirCurriculo(){
 }
 
 
-function bttSimples(){
-    const curriculosimples = document.getElementById('curSimples')
-    const curriculocaprichado = document.getElementById('curCaprichado')
+function bttField(){
+    const curriculofield = document.getElementById('curSimples')
+    const curriculodev = document.getElementById('curCaprichado')
 
-    const bttdowloadsimples = document.getElementById('baixar-curriculo-simples')
-    const bttdowloadcapri = document.getElementById('baixar-curriculo-design')
+    const bttdowloadfield = document.getElementById('baixar-curriculo-simples')
+    const bttdowloaddev = document.getElementById('baixar-curriculo-design')
 
-    curriculocaprichado.classList.add('curriculo-none')
-    curriculosimples.classList.remove('curriculo-none')
+    curriculodev.classList.add('curriculo-none')
+    curriculofield.classList.remove('curriculo-none')
 
-    bttdowloadsimples.classList.remove('curriculo-none')
-    bttdowloadcapri.classList.add('curriculo-none')
-
+    bttdowloaddev.classList.add('curriculo-none')
+    bttdowloadfield.classList.remove('curriculo-none')
 }
 
-function bttCaprichado(){
-    const curriculosimples = document.getElementById('curSimples')
-    const curriculocaprichado = document.getElementById('curCaprichado')
+function bttDev(){
+    const curriculofield = document.getElementById('curSimples')
+    const curriculodev = document.getElementById('curCaprichado')
 
-    const bttdowloadsimples = document.getElementById('baixar-curriculo-simples')
-    const bttdowloadcapri = document.getElementById('baixar-curriculo-design')
+    const bttdowloadfield = document.getElementById('baixar-curriculo-simples')
+    const bttdowloaddev = document.getElementById('baixar-curriculo-design')
 
-    curriculocaprichado.classList.remove('curriculo-none')
-    curriculosimples.classList.add('curriculo-none')
-    
-    bttdowloadsimples.classList.add('curriculo-none')
-    bttdowloadcapri.classList.remove('curriculo-none')
+    curriculodev.classList.remove('curriculo-none')
+    curriculofield.classList.add('curriculo-none')
+
+    bttdowloadfield.classList.add('curriculo-none')
+    bttdowloaddev.classList.remove('curriculo-none')
 }
