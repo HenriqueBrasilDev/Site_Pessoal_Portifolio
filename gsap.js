@@ -63,3 +63,77 @@ document.addEventListener("DOMContentLoaded", (event) => {
     */
     
 });
+
+// Função para executar a animação de saída
+function animarSaida(urlDestino) {
+    const tlSaida = gsap.timeline({
+        // Quando a timeline terminar, redireciona para a nova página
+        onComplete: () => {
+            if(urlDestino) {
+                window.location.href = urlDestino;
+            }
+        }
+    });
+
+    // Anima a saída na ordem inversa ou agrupada para ser mais rápida
+    tlSaida
+        // 1. Some com os ícones e botões (descendo e apagando)
+        .to(".icons li, .btt a", {
+            duration: 0.4,
+            y: 30,
+            opacity: 0,
+            stagger: 0.05, // Stagger mais rápido na saída
+            ease: "power2.in" // Easing ".in" é melhor para saídas
+        })
+        
+        // 2. Some com o texto (escorregando de volta para a esquerda)
+        .to(".conteudo p, .conteudo h1", {
+            duration: 0.5,
+            x: -100,
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power3.in"
+        }, "-=0.2")
+
+        // 3. Some com o Header (subindo)
+        .to("header", {
+            duration: 0.5,
+            y: -50,
+            opacity: 0,
+            ease: "power2.in"
+        }, "-=0.3")
+
+        // 4. Some com a imagem de fundo (escorregando para a direita)
+        .to(".imagemdefundo_home", {
+            duration: 0.8,
+            x: 100,
+            opacity: 0,
+            ease: "power3.in"
+        }, "-=0.3");
+}
+
+// ========================================================
+// COMO USAR: Interceptando cliques nos links do menu
+// ========================================================
+document.addEventListener("DOMContentLoaded", (event) => {
+    
+    // ... [SUA ANIMAÇÃO DE ENTRADA AQUI] ...
+
+    // Seleciona todos os links de navegação que devem ter a transição
+    // (Adicione a classe 'link-transicao' no HTML nos links do seu menu)
+    const linksDeTransicao = document.querySelectorAll("a.link-transicao");
+
+    linksDeTransicao.forEach(link => {
+        link.addEventListener("click", function(e) {
+            // Verifica se o link é para a mesma página (âncora) ou abre em nova guia
+            if (this.getAttribute('target') === '_blank' || this.getAttribute('href').startsWith('#')) {
+                return; // Deixa o comportamento padrão acontecer
+            }
+
+            e.preventDefault(); // Impede o clique de mudar a página instantaneamente
+            const urlDestino = this.getAttribute("href"); // Salva o destino do link
+
+            animarSaida(urlDestino); // Dispara a animação e passa o link
+        });
+    });
+});
